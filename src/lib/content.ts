@@ -8,7 +8,7 @@ export interface Article {
   date: string
   category: string
   tags: string[]
-  thumbnail: string
+  thumbnail: string | null
   person: string
   personMessage: string
   content: string
@@ -20,16 +20,35 @@ export interface Article {
   checks?: string[]
 }
 
+interface RawArticle {
+  slug: string
+  title: string
+  date: string
+  tags: string[]
+  thumbnail: string | null
+  person: string
+  personMessage: string
+  content: string
+  eventDate?: string
+  eventTime?: string
+  eventTimeDetail?: string
+  checks?: string[]
+}
+
+function withCategory(data: RawArticle[], category: string): Article[] {
+  return data.map((item) => ({ ...item, category }))
+}
+
 export function getColumns(): Article[] {
-  return columnsData as Article[]
+  return withCategory(columnsData as RawArticle[], 'column')
 }
 
 export function getEvents(): Article[] {
-  return eventsData as Article[]
+  return withCategory(eventsData as RawArticle[], 'event')
 }
 
 export function getSeminarLps(): Article[] {
-  return seminarlpsData as Article[]
+  return withCategory(seminarlpsData as RawArticle[], 'seminarlp')
 }
 
 export function getColumnBySlug(slug: string): Article | undefined {

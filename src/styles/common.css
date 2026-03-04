@@ -707,7 +707,7 @@ img {
 	color: var(--light-gray-dark);
 }
 .btm_nav.sticky-wrapper .container .h_gnav_wrap .h_gnav .h_gnav-item a.icon_about {
-	background: url("../img/icon_wakaba.svg") no-repeat left;
+	background: url("/img/icon_wakaba.svg") no-repeat left;
 	padding-left:1.2em;
 	background-size: 1em;
 }
