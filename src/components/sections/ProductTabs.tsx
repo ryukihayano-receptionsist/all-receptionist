@@ -1,0 +1,83 @@
+'use client'
+
+import { useState } from 'react'
+
+const tabs = [
+  {
+    label: '日程調整ツール',
+    icon: '/img/img_00-2-1.svg',
+    productLabel: '日程調整ツール',
+    name: '調整アポ',
+    heading: '日程調整の手作業がなくなる',
+    description: 'スケジュール調整をする時に手間のかかる作業をシステムで自動化。コピペしたURLを送るだけ日程調整が終わります。',
+    image: '/img/img_scheduling_kv_middle.png',
+  },
+  {
+    label: '受付システム',
+    icon: '/img/img_00-2-2.svg',
+    productLabel: 'クラウド受付システム',
+    name: 'RECEPTIONIST',
+    heading: 'あらゆる環境の受付の取次が０に',
+    description: '来客受付をスムーズに行い、来客履歴はクラウドに自動保存されます。',
+    image: '/img/img_reception_kv_middle.png',
+  },
+  {
+    label: '会議室予約システム',
+    icon: '/img/img_00-2-3@2x.png',
+    productLabel: '会議室予約システム',
+    name: '予約ルームズ',
+    heading: '会議室の「空いてない」を解決',
+    description: '空いてるスペースが一目でわかり、即予約ができます。時間お知らせ機能で退出の促しも可能です。',
+    image: '/img/img_meetingroom_kv_middle.png',
+  },
+]
+
+export default function ProductTabs() {
+  const [active, setActive] = useState(0)
+
+  return (
+    <section className="top-about">
+      <div className="container">
+        <h3>
+          組織のコミュニケーションをアップデートする<br className="sp" />３つのサービス
+        </h3>
+        <div className="top-about-wrap uk-flex" style={{ flexWrap: 'wrap', position: 'relative' }}>
+          {/* Tab buttons */}
+          <ul className="uk-subnav" style={{ display: 'flex', gap: '14px', position: 'absolute', left: '-20px' }}>
+            {tabs.map((tab, i) => (
+              <li key={i} className={active === i ? 'uk-active' : ''}>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setActive(i)
+                  }}
+                >
+                  {tab.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {/* Text content */}
+          <div className="txt-box" style={{ width: '50%' }}>
+            <div className="tit-box">
+              <div className="icon-box">
+                <img src={tabs[active].icon} alt="" />
+              </div>
+              <h3>
+                <small>{tabs[active].productLabel}</small>
+                {tabs[active].name}
+              </h3>
+            </div>
+            <h4>{tabs[active].heading}</h4>
+            <p>{tabs[active].description}</p>
+          </div>
+          {/* Image */}
+          <div className="img-box" style={{ width: '50%' }}>
+            <img src={tabs[active].image} alt={tabs[active].name} />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

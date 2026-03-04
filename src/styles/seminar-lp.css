@@ -1,0 +1,49 @@
+/* seminar-lp.css — セミナーLP固有スタイル */
+
+.seminar-lp-page {
+  background-color: var(--light-gray-lightest);
+}
+
+.seminar-lp-page .article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-m);
+}
+
+.seminar-lp-page .contents-wrap {
+  padding: 60px;
+  border-radius: 10px;
+  background-color: var(--light-white);
+  box-shadow: 0 20px 30px 0 rgba(74, 126, 134, 0.1);
+}
+
+.seminar-lp-page .voice-detail-tit h1 {
+  font-size: 1.75em;
+  font-weight: bold;
+  color: var(--light-black);
+}
+
+.seminar-lp-page .voice-detail-tit {
+  margin-bottom: 30px;
+}
+
+.seminar-lp-page .main-img {
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.seminar-lp-page .main-img img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .seminar-lp-page .article {
+    padding: 0;
+  }
+
+  .seminar-lp-page .contents-wrap {
+    padding: 30px 6.4%;
+    border-radius: 0;
+  }
+}
