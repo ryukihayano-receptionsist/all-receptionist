@@ -9,7 +9,7 @@ const cases = [
   },
   {
     href: 'https://case.receptionist.jp/maruigroup/',
-    image: 'https://receptionist.jp/wp-content/themes/receptionist.jp/img/marui.png',
+    image: '/img/marui-case.png',
     alt: 'MARUI',
     title: '「DBJ健康経営格付」で最高ランクの企業が 有人×受付システム..とチャット浸透で業務効率化に成功！',
     company: '株式会社丸井グループ',
