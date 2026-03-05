@@ -73,7 +73,7 @@ export default function Footer() {
                   </h6>
                 </div>
                 <ul className="f-nav-list">
-                  <li><a href="https://event.receptionist.jp/function/">機能の紹介</a></li>
+                  <li><a href="https://event.receptionist.jp/help/helpcenter/">機能の紹介</a></li>
                   <li><a href="https://event.receptionist.jp/case/">導入事例</a></li>
                   <li><a href="https://event.receptionist.jp/document/">資料</a></li>
                 </ul>
@@ -88,9 +88,8 @@ export default function Footer() {
                   </h6>
                 </div>
                 <ul className="f-nav-list">
-                  <li><a href="https://ivr.receptionist.jp/function/">機能の紹介</a></li>
-                  <li><a href="https://ivr.receptionist.jp/case/">導入事例</a></li>
-                  <li><a href="https://ivr.receptionist.jp/document/">資料</a></li>
+                  <li><a href="https://ivr.receptionist.jp/">機能の紹介</a></li>
+                  <li><a href="https://ivr.receptionist.jp/resource/general/">資料</a></li>
                 </ul>
               </div>
               {/* サポート */}
