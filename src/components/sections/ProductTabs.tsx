@@ -59,9 +59,9 @@ export default function ProductTabs() {
         <h3>
           組織のコミュニケーションをアップデートする<br className="sp" />５つのサービス
         </h3>
-        <div className="top-about-wrap uk-flex" style={{ flexWrap: 'wrap', position: 'relative' }}>
+        <div className="top-about-wrap">
           {/* Tab buttons */}
-          <ul className="uk-subnav" style={{ display: 'flex', gap: '14px', position: 'absolute', left: '-20px' }}>
+          <ul className="uk-subnav" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
             {tabs.map((tab, i) => (
               <li key={i} className={active === i ? 'uk-active' : ''}>
                 <a
@@ -76,8 +76,9 @@ export default function ProductTabs() {
               </li>
             ))}
           </ul>
+          <div className="top-about-content" style={{ display: 'flex', flexWrap: 'wrap', gap: '30px' }}>
           {/* Text content */}
-          <div className="txt-box" style={{ width: '50%' }}>
+          <div className="txt-box" style={{ flex: '1 1 45%', minWidth: '280px' }}>
             <div className="tit-box">
               <div className="icon-box">
                 <img src={tabs[active].icon} alt="" />
@@ -91,8 +92,9 @@ export default function ProductTabs() {
             <p>{tabs[active].description}</p>
           </div>
           {/* Image */}
-          <div className="img-box" style={{ width: '50%' }}>
-            <img src={tabs[active].image} alt={tabs[active].name} />
+          <div className="img-box" style={{ flex: '1 1 45%', minWidth: '280px' }}>
+            <img src={tabs[active].image} alt={tabs[active].name} style={{ width: '100%', height: 'auto' }} />
+          </div>
           </div>
         </div>
       </div>
