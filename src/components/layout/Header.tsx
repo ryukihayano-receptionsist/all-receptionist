@@ -18,9 +18,11 @@ export default function Header() {
               </Link>
               <nav className="h_l_nav">
                 <ul>
-                  <li><a href="https://receptionist.jp/">受付システム</a></li>
-                  <li><a href="https://scheduling.receptionist.jp">日程調整ツール</a></li>
-                  <li><a href="https://rooms.receptionist.jp">会議室予約システム</a></li>
+                  <li><a href="https://receptionist.jp/">RECEPTIONIST</a></li>
+                  <li><a href="https://rooms.receptionist.jp/">予約ルームズ</a></li>
+                  <li><a href="https://scheduling.receptionist.jp/">調整アポ</a></li>
+                  <li><a href="https://event.receptionist.jp/">招待レセプション</a></li>
+                  <li><a href="https://ivr.receptionist.jp/">代表電話コネクト</a></li>
                 </ul>
               </nav>
             </div>
@@ -67,14 +69,6 @@ export default function Header() {
               <h6>製品紹介</h6>
               <ul className="nav_product">
                 <li>
-                  <a href="https://scheduling.receptionist.jp">
-                    <span className="icon">
-                      <img src="/img/img_00-2-1.svg" alt="日程調整ツール「調整アポ」" />
-                    </span>
-                    <p>調整アポ<small>日程調整ツール</small></p>
-                  </a>
-                </li>
-                <li>
                   <a href="https://receptionist.jp/">
                     <span className="icon">
                       <img src="/img/img_00-2-2.svg" alt="クラウド受付システムRECEPTIONIST" />
@@ -83,17 +77,39 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://rooms.receptionist.jp">
+                  <a href="https://rooms.receptionist.jp/">
                     <span className="icon">
                       <img src="/img/img_00-2-3@2x.png" alt="予約ルームズ" />
                     </span>
                     <p>予約ルームズ<small>会議室の予約管理システム</small></p>
                   </a>
                 </li>
+                <li>
+                  <a href="https://scheduling.receptionist.jp/">
+                    <span className="icon">
+                      <img src="/img/img_00-2-1.svg" alt="日程調整ツール「調整アポ」" />
+                    </span>
+                    <p>調整アポ<small>日程調整ツール</small></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://event.receptionist.jp/">
+                    <span className="icon">
+                      <img src="/img/img_00-2-2.svg" alt="招待レセプション" />
+                    </span>
+                    <p>招待レセプション<small>イベント受付システム</small></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ivr.receptionist.jp/">
+                    <span className="icon">
+                      <img src="/img/img_00-2-2.svg" alt="代表電話コネクト" />
+                    </span>
+                    <p>代表電話コネクト<small>代表電話の自動応答</small></p>
+                  </a>
+                </li>
               </ul>
             </dd>
-            <dd><Link href="/column/" onClick={() => setMenuOpen(false)}>コラム</Link></dd>
-            <dd><Link href="/event/" onClick={() => setMenuOpen(false)}>イベント情報</Link></dd>
           </dl>
         </div>
       </nav>
