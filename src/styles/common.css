@@ -1146,6 +1146,16 @@ h3 + p.b1 {
 	background-color: var(--light-gray-lightest);
 	padding:var(--spacing-l) 0 60px;
 }
+.f-nav-col {
+	width: 100%;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+@media (min-width: 960px) {
+	.f-nav-col {
+		width: calc(100% / 6);
+	}
+}
 .footer .f-logo {
 	width:50%;
 	max-width:80px;
