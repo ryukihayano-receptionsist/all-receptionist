@@ -8,8 +8,7 @@ export default function HeroSection() {
               <img src="/img/img-logo-reception.svg" alt="RECEPTIONIST" />
             </p>
             <h1>
-              ビジネスコミュニケーションを<br />
-              アップデートする。
+              ビジネスの不条理をなくす。
             </h1>
             <p>
               RECEPTIONISTシリーズは、ビジネス上のつながりをテクノロジーでスマートにすることで各従業員が本来やるべき業務に集中でき、働きやすい環境に変えていくクラウドサービス群です。

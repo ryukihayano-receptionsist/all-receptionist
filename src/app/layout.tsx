@@ -3,7 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RECEPTIONIST | ビジネスコミュニケーションをアップデート',
+  title: 'RECEPTIONIST | ビジネスの不条理をなくす。',
   description: 'RECEPTIONIST（レセプショニスト）は、受付システム・日程調整ツール・会議室予約システムで、社外ビジネスコミュニケーションをアップデートするクラウドサービス群です。',
 }
 
