@@ -1,4 +1,4 @@
-const services = [
+const topServices = [
   {
     href: 'https://scheduling.receptionist.jp/',
     icon: '/img/img_00-2-1.svg',
@@ -29,6 +29,9 @@ const services = [
     image: '/img/img_meetingroom_small.png',
     imageAlt: '会議室の予約管理システム',
   },
+]
+
+const bottomServices = [
   {
     href: 'https://event.receptionist.jp/',
     icon: '/img/img_00-2-event.png',
@@ -51,29 +54,42 @@ const services = [
   },
 ]
 
+function ServiceCard({ s }: { s: typeof topServices[0] }) {
+  return (
+    <div className="box uk-width-1-3@m" style={{ flex: '0 0 33.333%', maxWidth: '33.333%' }}>
+      <a href={s.href}>
+        <div className="tit-box">
+          <div className="icon-box">
+            <img src={s.icon} alt={s.iconAlt} />
+          </div>
+          <h3><small>{s.label}</small>{s.name}</h3>
+        </div>
+        <p className="b1 uk-text-justify">{s.description}</p>
+        <div className="img-box">
+          <picture>
+            <img src={s.image} alt={s.imageAlt} />
+          </picture>
+        </div>
+      </a>
+    </div>
+  )
+}
+
 export default function ServiceCards() {
   return (
     <section className="top-service-index-wrap">
       <div className="container">
         <h3 className="uk-text-center">各サービスについて</h3>
+        {/* 上段3つ */}
         <div className="uk-grid uk-grid-medium" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          {services.map((s) => (
-            <div className="box uk-width-1-3@m" key={s.name} style={{ flex: '0 0 33.333%', maxWidth: '33.333%' }}>
-              <a href={s.href}>
-                <div className="tit-box">
-                  <div className="icon-box">
-                    <img src={s.icon} alt={s.iconAlt} />
-                  </div>
-                  <h3><small>{s.label}</small>{s.name}</h3>
-                </div>
-                <p className="b1 uk-text-justify">{s.description}</p>
-                <div className="img-box">
-                  <picture>
-                    <img src={s.image} alt={s.imageAlt} />
-                  </picture>
-                </div>
-              </a>
-            </div>
+          {topServices.map((s) => (
+            <ServiceCard s={s} key={s.name} />
+          ))}
+        </div>
+        {/* 下段2つ — 中央寄せ、上段と同じカード幅 */}
+        <div className="uk-grid uk-grid-medium" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {bottomServices.map((s) => (
+            <ServiceCard s={s} key={s.name} />
           ))}
         </div>
       </div>
