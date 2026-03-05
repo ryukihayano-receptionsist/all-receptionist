@@ -30,6 +30,24 @@ const tabs = [
     description: '空いてるスペースが一目でわかり、即予約ができます。時間お知らせ機能で退出の促しも可能です。',
     image: '/img/img_meetingroom_kv_middle.png',
   },
+  {
+    label: 'イベント受付',
+    icon: '/img/img_00-2-event.png',
+    productLabel: 'イベント受付システム',
+    name: '招待レセプション',
+    heading: 'イベント受付もQRでスムーズに',
+    description: '招待状の発行から当日の受付まで、イベントに必要な受付業務をQRコードでシステム化。受付の混雑を解消します。',
+    image: '/img/img_event_kv_middle.png',
+  },
+  {
+    label: '代表電話',
+    icon: '/img/img_00-2-ivr.png',
+    productLabel: '電話応答自動システム',
+    name: '代表電話コネクト',
+    heading: '代表電話はシステムで一次受け',
+    description: 'AIが代表電話に自動応答し、用件をチャットで担当者に通知。電話の取次業務をなくします。',
+    image: '/img/img_ivr_kv_middle.png',
+  },
 ]
 
 export default function ProductTabs() {
@@ -39,7 +57,7 @@ export default function ProductTabs() {
     <section className="top-about">
       <div className="container">
         <h3>
-          組織のコミュニケーションをアップデートする<br className="sp" />３つのサービス
+          組織のコミュニケーションをアップデートする<br className="sp" />５つのサービス
         </h3>
         <div className="top-about-wrap uk-flex" style={{ flexWrap: 'wrap', position: 'relative' }}>
           {/* Tab buttons */}

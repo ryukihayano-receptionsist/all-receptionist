@@ -95,7 +95,7 @@ export default function Header() {
                 <li>
                   <a href="https://event.receptionist.jp/">
                     <span className="icon">
-                      <img src="/img/img_00-2-2.svg" alt="招待レセプション" />
+                      <img src="/img/img_00-2-event.png" alt="招待レセプション" />
                     </span>
                     <p>招待レセプション<small>イベント受付システム</small></p>
                   </a>
@@ -103,7 +103,7 @@ export default function Header() {
                 <li>
                   <a href="https://ivr.receptionist.jp/">
                     <span className="icon">
-                      <img src="/img/img_00-2-2.svg" alt="代表電話コネクト" />
+                      <img src="/img/img_00-2-ivr.png" alt="代表電話コネクト" />
                     </span>
                     <p>代表電話コネクト<small>代表電話の自動応答</small></p>
                   </a>

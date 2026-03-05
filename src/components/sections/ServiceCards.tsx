@@ -1,6 +1,6 @@
 const services = [
   {
-    href: 'https://scheduling.receptionist.jp',
+    href: 'https://scheduling.receptionist.jp/',
     icon: '/img/img_00-2-1.svg',
     iconAlt: '調整アポ',
     label: '日程調整ツール',
@@ -13,14 +13,14 @@ const services = [
     href: 'https://receptionist.jp/',
     icon: '/img/img_00-2-2.svg',
     iconAlt: 'RECEPTIONIST',
-    label: '受付システム',
+    label: 'クラウド受付システム',
     name: 'RECEPTIONIST',
     description: '来客受付業務をシンプルに',
     image: '/img/img_reception_small.png',
     imageAlt: 'クラウド受付システム',
   },
   {
-    href: 'https://rooms.receptionist.jp',
+    href: 'https://rooms.receptionist.jp/',
     icon: '/img/img_00-2-3@2x.png',
     iconAlt: '予約ルームズ',
     label: '会議室予約システム',
@@ -29,6 +29,26 @@ const services = [
     image: '/img/img_meetingroom_small.png',
     imageAlt: '会議室の予約管理システム',
   },
+  {
+    href: 'https://event.receptionist.jp/',
+    icon: '/img/img_00-2-event.png',
+    iconAlt: '招待レセプション',
+    label: 'イベント受付システム',
+    name: '招待レセプション',
+    description: 'イベント受付もQRでスムーズに',
+    image: '/img/img_event_kv_small.png',
+    imageAlt: 'イベント受付システム',
+  },
+  {
+    href: 'https://ivr.receptionist.jp/',
+    icon: '/img/img_00-2-ivr.png',
+    iconAlt: '代表電話コネクト',
+    label: '電話応答自動システム',
+    name: '代表電話コネクト',
+    description: '代表電話はシステムで一次受け',
+    image: '/img/img_ivr_kv_small.png',
+    imageAlt: '電話応答自動システム',
+  },
 ]
 
 export default function ServiceCards() {
@@ -36,9 +56,9 @@ export default function ServiceCards() {
     <section className="top-service-index-wrap">
       <div className="container">
         <h3 className="uk-text-center">各サービスについて</h3>
-        <div className="uk-grid uk-grid-medium">
+        <div className="uk-grid uk-grid-medium" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {services.map((s) => (
-            <div className="box uk-width-1-3@m" key={s.name}>
+            <div className="box uk-width-1-3@m" key={s.name} style={{ flex: '0 0 33.333%', maxWidth: '33.333%' }}>
               <a href={s.href}>
                 <div className="tit-box">
                   <div className="icon-box">
