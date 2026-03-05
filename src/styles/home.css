@@ -309,7 +309,6 @@ top-about
 .top-about-wrap .uk-subnav {
 	position:relative;
 	left:-20px;
-	position:absolute;
 }
 .top-about-wrap .uk-subnav > * {
     flex: none;
